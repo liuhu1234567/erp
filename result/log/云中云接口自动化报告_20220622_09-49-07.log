@@ -1,0 +1,34 @@
+2022-06-22 09:49:07,955 - 云中云接口 - INFO - 请求地址为：http://192.168.12.143:9900/api-uaa/login/password
+2022-06-22 09:49:07,955 - 云中云接口 - INFO - 请求头为：{'Content-Type': 'application/json;charset=UTF-8', 'Accept-Language': 'zh-CN,zh;q=0.9'}
+2022-06-22 09:49:07,955 - 云中云接口 - INFO - 参数为：{'username': 'xzl123456', 'password': 'b123456789', 'code': '123456', 'remember': True, 'grant_type': 'password', 'clientId': 'webApp', 'clientSecret': 'webApp', 'type': 1}
+2022-06-22 09:49:08,129 - 云中云接口 - INFO - 接口响应为：{"datas":{"access_token":"b47fb811-8934-47fb-8c7f-9cbce4153e16","token_type":"bearer","refresh_token":"bd008bfc-e1cd-4e16-8f46-c9ef0b4c6927","expires_in":17703,"scope":"app","account_type":"admin","userType":1,"appid":"1"},"resp_code":200,"resp_msg":"SUCCESS"}
+2022-06-22 09:49:08,130 - 云中云接口 - INFO - 运营平台token为：bearer b47fb811-8934-47fb-8c7f-9cbce4153e16
+2022-06-22 09:49:08,130 - 云中云接口 - INFO - 请求地址为：http://192.168.12.143:9900/api-uaa/login/password
+2022-06-22 09:49:08,130 - 云中云接口 - INFO - 请求头为：{'Content-Type': 'application/json;charset=UTF-8', 'Accept-Language': 'zh-CN,zh;q=0.9'}
+2022-06-22 09:49:08,130 - 云中云接口 - INFO - 参数为：{'username': 'xzl123456', 'password': 'b123456789', 'code': '123456', 'remember': True, 'grant_type': 'password', 'clientId': 'webApp', 'clientSecret': 'webApp', 'type': 1}
+2022-06-22 09:49:08,270 - 云中云接口 - INFO - 接口响应为：{"datas":{"access_token":"b47fb811-8934-47fb-8c7f-9cbce4153e16","token_type":"bearer","refresh_token":"bd008bfc-e1cd-4e16-8f46-c9ef0b4c6927","expires_in":17703,"scope":"app","account_type":"admin","userType":1,"appid":"1"},"resp_code":200,"resp_msg":"SUCCESS"}
+2022-06-22 09:49:08,270 - 云中云接口 - INFO - 业务平台token为：bearer b47fb811-8934-47fb-8c7f-9cbce4153e16
+2022-06-22 09:49:08,274 - 云中云接口 - INFO - 请求地址为：http://192.168.12.143:9900/api-uaa/login/password
+2022-06-22 09:49:08,274 - 云中云接口 - INFO - 请求头为：{'Content-Type': 'application/json;charset=UTF-8', 'Accept-Language': 'zh-CN,zh;q=0.9'}
+2022-06-22 09:49:08,274 - 云中云接口 - INFO - 参数为：{'username': 'xxxxxx', 'password': 'ab1111111', 'code': '1234', 'remember': True, 'grant_type': 'password', 'clientId': 'webApp', 'clientSecret': 'webApp', 'type': 1}
+2022-06-22 09:49:08,426 - 云中云接口 - INFO - 接口响应为：{"datas":None,"resp_code":500,"resp_msg":"用户名或密码错误"}
+2022-06-22 09:49:08,427 - 云中云接口 - INFO - 请求地址为：http://192.168.12.143:9900/api-uaa/login/password
+2022-06-22 09:49:08,428 - 云中云接口 - INFO - 请求头为：{'Content-Type': 'application/json;charset=UTF-8', 'Accept-Language': 'zh-CN,zh;q=0.9'}
+2022-06-22 09:49:08,428 - 云中云接口 - INFO - 参数为：{'username': 'xxxxxx', 'password': 'ab123456', 'code': '1234', 'remember': True, 'grant_type': 'password', 'clientId': 'webApp', 'clientSecret': 'webApp', 'type': 1}
+2022-06-22 09:49:08,564 - 云中云接口 - INFO - 接口响应为：{"datas":{"access_token":"b435a887-796a-4abb-954f-a7e290209db9","token_type":"bearer","refresh_token":"0b746bab-69aa-4a47-84fa-680d6ec194c5","expires_in":17703,"scope":"app","account_type":"admin","userType":1,"appid":"1"},"resp_code":200,"resp_msg":"SUCCESS"}
+2022-06-22 09:49:08,564 - 云中云接口 - INFO - 请求地址为：http://192.168.12.143:9900/api-uaa/login/password
+2022-06-22 09:49:08,564 - 云中云接口 - INFO - 请求头为：{'Content-Type': 'application/json;charset=UTF-8', 'Accept-Language': 'zh-CN,zh;q=0.9'}
+2022-06-22 09:49:08,564 - 云中云接口 - INFO - 参数为：{'username': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'password': '11111111', 'code': '1234', 'remember': True, 'grant_type': 'password', 'clientId': 'webApp', 'clientSecret': 'webApp', 'type': 1}
+2022-06-22 09:49:08,602 - 云中云接口 - INFO - 接口响应为：{"datas":None,"resp_code":1002107,"resp_msg":"账号密码不匹配，请输入正确的账号/密码"}
+2022-06-22 09:49:08,604 - 云中云接口 - INFO - url为：http://192.168.12.143:9900/api-node/sysuser/requireResetPassword
+2022-06-22 09:49:08,604 - 云中云接口 - INFO - 请求头为：{'Authorization': 'bearer b47fb811-8934-47fb-8c7f-9cbce4153e16', 'Content-Type': 'application/json;charset=UTF-8', 'x-appid-header': '1'}
+2022-06-22 09:49:08,605 - 云中云接口 - INFO - 参数为：{}
+2022-06-22 09:49:08,636 - 云中云接口 - INFO - 接口响应为：{"datas":false,"resp_code":200,"resp_msg":"SUCCESS"}
+2022-06-22 09:49:08,637 - 云中云接口 - INFO - url为：http://192.168.12.143:9900/api-node/sysuser/requireResetPassword
+2022-06-22 09:49:08,637 - 云中云接口 - INFO - 请求头为：{'Authorization': 'bearer b47fb811-8934-47fb-8c7f-9cbce4153e16', 'Content-Type': 'application/json;charset=UTF-8', 'x-appid-header': '2'}
+2022-06-22 09:49:08,638 - 云中云接口 - INFO - 参数为：{}
+2022-06-22 09:49:08,669 - 云中云接口 - INFO - 接口响应为：{"datas":false,"resp_code":200,"resp_msg":"SUCCESS"}
+2022-06-22 09:49:08,670 - 云中云接口 - INFO - url为：http://192.168.12.143:9900/api-node/tenant/getindexappCount
+2022-06-22 09:49:08,670 - 云中云接口 - INFO - 请求头为：{'Authorization': 'bearer b47fb811-8934-47fb-8c7f-9cbce4153e16', 'x-appid-header': '1'}
+2022-06-22 09:49:08,670 - 云中云接口 - INFO - 参数为：{}
+2022-06-22 09:49:08,703 - 云中云接口 - INFO - 接口响应为：{"datas":{"appNum":276},"resp_code":200,"resp_msg":"SUCCESS"}

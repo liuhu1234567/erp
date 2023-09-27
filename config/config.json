@@ -1,0 +1,32 @@
+{
+  "all_host": {
+    "test_partnership": "http://spvpre-icpvopt.skyworthpv.cn",
+    "test_erp": "http://spvpre-icpv.skyworthpv.cn",
+    "prod": "",
+    "dev": "http://172.30.206.58:33099"
+  },
+  "restime": 3,
+  "env_now": "test",
+  "environment": "UAT",
+  "test_type": "API",
+  "report_name": "借口自动化报告_${start_time}.html",
+  "skyworth_partnership": {
+    "//": "合伙运营商管理平台",
+    "platform": "ICPVOPERATORMANAGER",
+    "username": "17585245522",
+    "password": "Hc2HktKFDRxv2gpIzcURTbZZJpYNbORfZi5cWizKgpN9HgT1r243/AXnfZxcrslKVmBYrWaHMWbZq+5JIc3J6+LoMMi4rioiK0rqsNNSd5B6yFClU0cPFmTJ3OSA5Y1E2rsht7FxcLsRT+y+oozVPTCLNnwnNN3ksbcFEdYVCEU="
+  },
+  "skyworth_erp": {
+    "//": "erp账号登录",
+    "platform": "ICPVMANAGER",
+    "username": "17585245519",
+    "password": "Hc2HktKFDRxv2gpIzcURTbZZJpYNbORfZi5cWizKgpN9HgT1r243/AXnfZxcrslKVmBYrWaHMWbZq+5JIc3J6+LoMMi4rioiK0rqsNNSd5B6yFClU0cPFmTJ3OSA5Y1E2rsht7FxcLsRT+y+oozVPTCLNnwnNN3ksbcFEdYVCEU="
+  },
+  "upload_report": {
+    "upload_MeterShpere": false,
+    "upload_robot": false,
+    "upload_email": false
+  }
+}
+
+

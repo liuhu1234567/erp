@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title> {{ title }} </title>
+    <meta name="Crew" content="TestRunner {{ version }}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://dev-dfs.dianliantech.com/group1/M00/02/F0/rB7ONGNhyh6ARU0aAAFEnEB8J4E.min.js"></script>
+    <link rel="stylesheet" href="https://dev-dfs.dianliantech.com/group1/M00/02/F2/rB7ONGNhzZWAcR_pAANUhUz1OmM696.css">
+    <link rel="stylesheet" href="https://dev-dfs.dianliantech.com/group1/M00/02/F2/rB7ONGNhzaCAROCDAAlYqh1gL8o528.css">
+
+    {{ stylesheet }}
+</head>
+
+<style>
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.7;
+}
+</style>
+
+<body style="background-color: #f5f9fc;">
+    <script language="javascript" type="text/javascript">
+        function showLog(id) {
+            document.body.style.overflow = 'hidden'
+            document.body.style.height='100%'
+            document.getElementById(id).style.display = 'table-row'
+        }
+
+        function hideLog(id) {
+            document.body.style.overflow = 'auto';
+            document.getElementById(id).style.display = 'none'
+        }
+
+        function showImg(obj) {
+            document.body.style.overflow = 'hidden'
+            document.body.style.height='100%'
+            var nextObj = obj.nextElementSibling
+            nextObj.style.display = 'table-row'
+            var index = 0;   //每张图片的下标，
+            var len = nextObj.getElementsByTagName('img').length;
+            var imgCircle = nextObj.getElementsByClassName('img-circle')[0]
+            nextObj.onmouseover = function () {  //当鼠标光标停在图片上，则停止轮播
+                clearInterval(start);
+            }
+            nextObj.onmouseout = function () {  //当鼠标光标停在图片上，则开始轮播
+                start = setInterval(autoPlay, 1000);
+            }
+            for (var i = 0; i < len; i++) {
+                var fontTag = document.createElement('font')
+                imgCircle.appendChild(fontTag)
+            }
+            var fontTagList = nextObj.getElementsByTagName('font');  //得到所有圆圈
+            changeImg(0)
+            var funny = function (i) {
+                fontTagList[i].onmouseover = function () {
+                    index = i
+                    changeImg(i)
+                }
+            }
+            for (var i = 0; i < fontTagList.length; i++) {
+                funny(i);
+            }
+
+            function autoPlay() {
+                if (index > len - 1) {
+                    index = 0;
+                    clearInterval(start); //运行一轮后停止
+                }
+                changeImg(index++);
+            }
+            imgCircle.style.width = 30 * len + "px";
+            // 对应圆圈和图片同步
+            function changeImg(index) {
+                var imgTags = nextObj.getElementsByTagName('img');
+                var fontTags = nextObj.getElementsByTagName('font');
+                for (i=0; i < fontTags.length; i++) {
+                    imgTags[i].style.display = 'none';
+                    fontTags[i].style.backgroundColor = 'white';
+                }
+                imgTags[index].style.display = 'table-row';
+                if (fontTags.length > 0) {
+                    fontTags[index].style.backgroundColor = 'red';
+                }
+            }
+        }
+
+        function hideImg(obj) {
+            document.body.style.overflow = 'auto';
+            obj.parentElement.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+            obj.parentElement.parentElement.parentElement.getElementsByClassName('img-circle')[0].innerHTML = "";
+        }
+
+        output_list = Array();
+        /* level 
+        - 0:Summary
+        - 1:Failed 
+        - 2:Skip
+        - 3:All 
+        */
+        function showCase(level, channel) {
+            trs = document.getElementsByTagName("tr");
+            for (var i=1; i < trs.length; i++) {
+                tr = trs[i];
+                id = tr.id;
+                if (["ft", "pt", "et", "st"].indexOf(id.substr(0, 2)) != -1) {
+                    if (level == 0 && id.substr(2, 1) == channel) {
+                        tr.style.display = 'none';
+                    }
+                }
+                if(level>5){
+                    tr.style.display = 'table-row';
+                }
+
+                if (level == 1) {
+                    if (id.substr(0, 3) == 'pt' + channel) {
+                        tr.style.display = 'table-row';
+                    }
+                    else {
+                        tr.style.display = 'none';
+                    }
+                }
+                if (level == 2) {
+                    if (id.substr(0, 3) == 'ft' + channel) {
+                        tr.style.display = 'table-row';
+                    }
+                    else {
+                        tr.style.display = 'none';
+                    }
+                }
+                if (level == 3) {
+                    if (id.substr(0, 3) == 'tt' + channel) {
+                        tr.style.display = 'table-row';
+                    }
+                    else {
+                        tr.style.display = 'none';
+                    }
+                }
+                if (level == 4) {
+                    if (id.substr(0, 3) == 'et' + channel) {
+                        tr.style.display = 'table-row';
+                    }
+                    
+                    else {
+                        tr.style.display = 'none';
+                    }
+                }
+                if (level == 5) {
+                    if (id.substr(0, 3) == 'st' + channel) {
+                        tr.style.display = 'table-row';
+                    }
+                    else {
+                        tr.style.display = 'none';
+                    }
+                }
+            }
+        }
+        function showClassDetail(cid, count) {
+            var id_list = Array(count);
+            var toHide = 1;
+            for (var i=0; i < count; i++) {
+                tid0 = 't' + cid.substr(1) + '.' + (i + 1);
+                tid = 'f' + tid0;
+                tr = document.getElementById(tid);
+                if (!tr) {
+                    tid = 'p' + tid0;
+                    tr = document.getElementById(tid);
+                }
+                if (!tr) {
+                    tid = 'e' + tid0;
+                    tr = document.getElementById(tid);
+                }
+                if (!tr) {
+                    tid = 's' + tid0;
+                    tr = document.getElementById(tid);
+                }
+                id_list[i] = tid;
+                if (tr.className) {
+                    toHide = 0;
+                }
+            }
+            for (var i = 0; i < count; i++) {
+                tid = id_list[i];
+                if (toHide) {
+                    document.getElementById(tid).className = 'hiddenRow';
+                }
+                else {
+                    document.getElementById(tid).className = '';
+                }
+            }
+        }
+        function showTestDetail(div_id) {
+            var detailsDiv = document.getElementById(div_id)
+            var displayState = detailsDiv.style.display
+
+            if (displayState != 'table-row') {
+                displayState = 'table-row'
+                detailsDiv.style.display = 'table-row'
+            }
+            else {
+                detailsDiv.style.display = 'none'
+            }
+        }
+        function html_escape(s) {
+            s = s.replace(/&/g, '&amp;');
+            s = s.replace(/</g, '&lt;');
+            s = s.replace(/>/g, '&gt;');
+            return s;
+        }
+    </script>
+
+    {{ heading }}
+    {{ report }}
+    {{ chart_script }}
+
+
+<footer class="footer" style="height: 50px; position: relative;width: 100%">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                自动化测试 {{ version }}; 2022 © 点链科技-研发部
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
